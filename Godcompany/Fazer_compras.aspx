@@ -126,12 +126,14 @@
     <h1 style="color:black"> <label for="inputEmail3" class=" col-form-label" style="font-family: Lucida Bright" >Voo de Ida:</label></h1>
      <asp:Label ID="lbl_id_voo_ida" runat="server" Text="Label" Visible="false"></asp:Label>
     <asp:TextBox ID="txt_voo_ida" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="440px" BackColor="White" ReadOnly="True"></asp:TextBox>
+   <asp:TextBox ID="txt_voo_de_ida" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="220px" BackColor="White" ReadOnly="True"></asp:TextBox>
     <asp:TextBox ID="txt_hora_voo_ida" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="220px" BackColor="White" ReadOnly="True"></asp:TextBox>
     <asp:TextBox ID="txt_hora_chegada_voo_ida" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="220px" BackColor="White" ReadOnly="True"></asp:TextBox>
 
     <h1 style="color:black"> <label for="inputEmail3" class=" col-form-label" style="font-family: Lucida Bright" >Voo de Volta:</label></h1>
      <asp:Label ID="lbl_id_voo_volta" runat="server" Text="Label" Visible="false"></asp:Label>
     <asp:TextBox ID="txt_voo_volta" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="440px" BackColor="White" ReadOnly="True"></asp:TextBox>
+    <asp:TextBox ID="txt_dia_volta" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="220px" BackColor="White" ReadOnly="True"></asp:TextBox>
     <asp:TextBox ID="txt_hora_voo_volta" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="220px" BackColor="White" ReadOnly="True"></asp:TextBox>
     <asp:TextBox ID="txt_hora_chegada_voo_volta" runat="server" class="form-control "  BorderStyle ="Solid"  placeholder="Nome" Font-Size="Medium" Width="220px" BackColor="White" ReadOnly="True"></asp:TextBox>
 

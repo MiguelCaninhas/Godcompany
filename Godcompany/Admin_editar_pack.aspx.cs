@@ -160,6 +160,43 @@ namespace Godcompany
 
             }
 
+
+            else
+            {
+                comando.CommandText = "update  viagens_pacotes set nome_pacote = @nome_pacote,  id_pais = @id_pais, descricao = @descricao, data_partida = @data_partida, data_chegada = @data_chegada, preço =@preco  where id_viagens_pacotes = @id_viagens_pacotes";
+
+
+
+                comando.Parameters.AddWithValue("@id_viagens_pacotes", id_viagens_pacotes.Text);
+                comando.Parameters.AddWithValue("@nome_pacote", nome_pacote.Text);
+                comando.Parameters.AddWithValue("@id_pais", Drop_pais_pack.SelectedValue);
+                comando.Parameters.AddWithValue("@preco", preco.Text);
+                comando.Parameters.AddWithValue("@descricao", descricao.Text);
+                comando.Parameters.AddWithValue("@data_partida", Convert.ToDateTime(data_entrega));
+                comando.Parameters.AddWithValue("@data_chegada", Convert.ToDateTime(data_chegada));
+               
+
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+
+                    Session["editar_pack_success"] = "true";
+                    //Response.Redirect("admim_editar_pack.aspx", false);
+
+                }
+
+
+                catch
+                {
+
+                    MessageBox.Show("erro", " ");
+                    //Response.Redirect("admim_editar_pack.aspx", false);
+
+
+                }
+            }
+
            
 
             ligar.Close();
@@ -1098,18 +1135,18 @@ namespace Godcompany
             var data_saida_v = new DateTime();
             var date = DateTime.Now;
 
-            if (dia_chegada_escrever.Text != "" && dia_partida_escrever.Text != "")
-            {
+            //if (dia_chegada_escrever.Text != "" && dia_partida_escrever.Text != "")
+            //{
 
-                data_entrada_v = Convert.ToDateTime(dia_partida_escrever.Text);
-                data_saida_v = Convert.ToDateTime(dia_chegada_escrever.Text);
-            }
+            //    data_entrada_v = Convert.ToDateTime(dia_partida_escrever.Text);
+            //    data_saida_v = Convert.ToDateTime(dia_chegada_escrever.Text);
+            //}
 
 
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error_campos_preencher()", true);
-            }
+            //else
+            //{
+            //    ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error_campos_preencher()", true);
+            //}
 
 
 
@@ -1124,12 +1161,12 @@ namespace Godcompany
 
             if (Panel_adicionar_atividades.Visible == false)
             {
-                if (nome_pacote.Text != "" && preco.Text != "" && descricao.Text != "" && dia_partida_escrever.Text != "" && dia_chegada_escrever.Text != "" && FileUpload1.FileName != "")
+                if (nome_pacote.Text != "" && preco.Text != "" && descricao.Text != "" )
                 {
-                    if (data_entrada_v > date && data_saida_v > date)
-                    {
-                        if (data_saida_v > data_entrada_v)
-                        {
+                    //if (data_entrada_v > date && data_saida_v > date)
+                    //{
+                    //    if (data_saida_v > data_entrada_v)
+                    //    {
                             if (Drop_voo_destino.SelectedValue != Drop_voo_origem.SelectedValue)
                             {
                                 Session["foto_pack_editar"] = Path.GetFileName(FileUpload1.FileName);
@@ -1151,16 +1188,16 @@ namespace Godcompany
 
                                 adicionar_atividades.Text = "Voltar";
                             }
-                            else
-                            {
-                                ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error_voo()", true);
-                            }
-                        }
+                        //    else
+                        //    {
+                        //        ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error_voo()", true);
+                        //    }
+                        //}
 
-                        else
-                        {
-                            ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "datas_erro()", true);
-                        }
+                        //else
+                        //{
+                        //    ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "datas_erro()", true);
+                        //}
                     }
 
                     else
@@ -1183,7 +1220,7 @@ namespace Godcompany
 
     }
 
-}
+
 
 
 

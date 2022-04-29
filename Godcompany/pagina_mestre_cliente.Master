@@ -92,9 +92,11 @@
 							<a href="#">Contactos</a>
 							<ul class="dropdown">
 								
-								<li><a href="https://www.facebook.com/GodCompany-101805145834535">Facebook</a></li>
+								<li ><a href="https://www.facebook.com/GodCompany-101805145834535"><i class="icon-facebook"></i>Facebook</a></li>
 
-								<li><a href="https://www.instagram.com/goodcompany_moita/">Instagram</a></li>
+								<li ><a href="https://www.instagram.com/goodcompany_moita/">Instagram</a></li>
+
+								<li><a href="https://discord.gg/vjK6hSG8"><i class="icon-chat"></i>Help</a></li>
 								
 							</ul>
 						</li>

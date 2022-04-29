@@ -105,6 +105,15 @@ namespace Godcompany
         protected global::System.Web.UI.WebControls.TextBox txt_voo_ida;
 
         /// <summary>
+        /// Controle txt_voo_de_ida.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_voo_de_ida;
+
+        /// <summary>
         /// Controle txt_hora_voo_ida.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,15 @@ namespace Godcompany
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_voo_volta;
+
+        /// <summary>
+        /// Controle txt_dia_volta.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_dia_volta;
 
         /// <summary>
         /// Controle txt_hora_voo_volta.

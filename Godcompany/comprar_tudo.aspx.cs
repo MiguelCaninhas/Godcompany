@@ -19,6 +19,9 @@ namespace Godcompany
 
         void pesquisar_packs()
         {
+
+            Session["validar_entrada_ver_pack"] = "false";
+
             int i = 0;
 
             MySqlConnection ligar = new MySqlConnection(configuracao), ligar2 = new MySqlConnection(configuracao), ligar3 = new MySqlConnection(configuracao), ligar4 = new MySqlConnection(configuracao), ligar_auxiliar = new MySqlConnection(configuracao);
@@ -122,6 +125,9 @@ namespace Godcompany
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+           
+
             MySqlConnection ligar = new MySqlConnection(configuracao);
             MySqlCommand comando_validar = new MySqlCommand();
             comando_validar.Connection = ligar;
@@ -166,10 +172,19 @@ namespace Godcompany
             }
 
 
+            if (Session["validar_entrada_ver_pack"].ToString() == "true")
+            {
+                
+            }
+
+
         }
 
         protected void dl_destinos_ItemDataBound(object sender, DataListItemEventArgs e)
         {
+
+
+            Session["validar_entrada_ver_pack"] = "true";
 
             DateTime data_entrada ;
 
@@ -207,13 +222,20 @@ namespace Godcompany
 
             data_entrada = Convert.ToDateTime (DataBinder.Eval(e.Item.DataItem, "data_partida"));
 
-            if (id_pack.Text == "" || Nome_pack.Text == "" || Nome_voo.Text == "" || Nome_atividade.Text == "" || img.ImageUrl == "" || data_entrada < date)
+            if (id_pack.Text == "" || Nome_pack.Text == "" || Nome_voo.Text == ""  || img.ImageUrl == "" || data_entrada < date)
             {
 
 
                 panel.Visible = false;
-                mostrar_nada.Visible = true;
+              
                 
+            }
+
+
+
+            if (Nome_atividade.Text == "")
+            {
+                Nome_atividade.Text = "Não tem atividades";
             }
             
            

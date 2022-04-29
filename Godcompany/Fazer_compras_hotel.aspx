@@ -125,6 +125,27 @@
 
 
             }
+
+
+
+            function Error_pessoas_nada() {
+
+
+
+
+                Swal.fire({
+                    padding: '8em',
+                    width: 600,
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Campos por preencher',
+                    showConfirmButton: false,
+                    timer: 3500
+                })
+
+
+
+            }
         </script>
 
 
@@ -257,11 +278,11 @@
       <h1 style="color:white" > <label for="inputEmail3" class=" col-form-label" > . </label></h1>
 
 
-   <h1 style="color:black; margin-left:40%;  font:medium; font-size:x-large; font-family: Lucida Bright"> <label for="inputEmail3" class=" col-form-label" >Preço por pessoa e por dia :</label></h1>
+   <h1 style="color:black; margin-left:45%;  font:medium; font-size:x-large; font-family: Lucida Bright"> <label for="inputEmail3" class=" col-form-label" >Preço total :</label></h1>
 
     <h1 style="color:white" > <label for="inputEmail3" class=" col-form-label" > . </label></h1>
   
-     <asp:TextBox ID="preço_2" runat="server" class="form-control col-sm-9"  BorderStyle ="Solid" Text="0"  placeholder="Numero" Font-Size="Medium" Width="70%" style="margin-left:15%" Enabled="false"></asp:TextBox>
+     <asp:TextBox ID="preço_2" runat="server" class="form-control col-sm-9"  BorderStyle ="Solid" Text="0"  placeholder="Numero" Font-Size="Medium" Width="70%" style="margin-left:15%" BackColor="White" ReadOnly="True" ></asp:TextBox>
 
     
 

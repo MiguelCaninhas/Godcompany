@@ -195,7 +195,7 @@ namespace Godcompany
 
             ligar.Open();
 
-            comando.CommandText = "Select id_hoteis, nome_hotel, id_classificacao from hoteis where " +
+            comando.CommandText = "Select id_hoteis, nome_hotel, id_classificacao, id_pais from hoteis where " +
                 "(id_hoteis = @id_hoteis)";
             comando.Parameters.AddWithValue("@id_hoteis", codigo);
 
@@ -209,6 +209,7 @@ namespace Godcompany
                 id_hotel.Text = Convert.ToString(DR["id_hoteis"]);
                 nome.Text = Convert.ToString(DR["nome_hotel"]);
                 DropDownList1.SelectedValue = Convert.ToString(DR["id_classificacao"]);
+                DropDownList2.SelectedValue = Convert.ToString(DR["id_pais"]);
 
 
             }

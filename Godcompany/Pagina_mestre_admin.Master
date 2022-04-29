@@ -190,43 +190,43 @@
 				<div class="col-md-4" Font-Size="Medium">
 					<div class="gtco-widget">
 						<h3 Font-Size="Medium">About Us</h3>
-						<p Font-Size="Medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos molestias quod sint ipsum possimus temporibus officia iste perspiciatis consectetur in fugiat repudiandae cum. Totam cupiditate nostrum ut neque ab?</p>
+						<p Font-Size="Medium">A sua agência de viagens GoodCompany tem a preocupação de estar sempre mais perto de si, para maior comodidade e total facilidade na marcação das suas viagens</p>
 					</div>
 				</div>
 
+
+				
+
 				<div class="col-md-2 col-md-push-1">
 					<div class="gtco-widget">
-						<h3 Font-Size="Medium">Destination</h3>
+						<h3 Font-Size="Medium">Cancelar uma compra?</h3>
 						<ul class="gtco-footer-links">
-							<li><a href="#" Font-Size="Medium">Europe</a></li>
-							<li><a href="#" Font-Size="Medium">Australia</a></li>
-							<li><a href="#" Font-Size="Medium">Asia</a></li>
-							<li><a href="#" Font-Size="Medium">Canada</a></li>
-							<li><a href="#" Font-Size="Medium">Dubai</a></li>
+							<p Font-Size="Medium">É possivel cancelar qualquer viagem desde que seija com dois dias de antecedencia</p>
+						
 						</ul>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-md-push-1">
 					<div class="gtco-widget">
-						<h3 Font-Size="Medium">Hotels</h3>
+						<h3 Font-Size="Medium">Resultados<p " style="color:white; font-size:small" >..........</p></h3>
 						<ul class="gtco-footer-links">
-							<li><a href="#" Font-Size="Medium">Luxe Hotel</a></li>
-							<li><a href="#" Font-Size="Medium">Italy 5 Star hotel</a></li>
-							<li><a href="#" Font-Size="Medium">Dubai Hotel</a></li>
-							<li><a href="#" Font-Size="Medium">Deluxe Hotel</a></li>
-							<li><a href="#" Font-Size="Medium">BoraBora Hotel</a></li>
+							
+								<p Font-Size="Medium">Todos os nossos clientes tem um grande gosto em trabalhar com GoodCompany</p>
 						</ul>
 					</div>
 				</div>
+
+				<h1 style="color:white">..</h1>
+
 
 				<div class="col-md-3 col-md-push-1">
 					<div class="gtco-widget">
-						<h3>Get In Touch</h3>
+						<h3>   Contactos</h3>
 						<ul class="gtco-quick-contact">
-							<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@GetTemplates.co</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+							<li><a href="#"><i class="icon-phone"></i>+351 961 456 321</a></li>
+							<li><a href="https://www.facebook.com/GodCompany-101805145834535"><i class="icon-facebook"></i>facebook</a></li>
+							<li><a href="https://discord.gg/vjK6hSG8"><i class="icon-chat"></i>Help</a></li>
 						</ul>
 					</div>
 				</div>

@@ -19,11 +19,14 @@ namespace Godcompany
         protected void Page_Load(object sender, EventArgs e)
         {
              
-            if (Session["validar_editar_pais"] == "true")
+            if (Session["validar_editar_pais"] == "true") {
+                Session["validar_editar_pais"] = "false";
             ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Correct()", true);
+            }
 
             if (Session["validar_eliminar_pais"] == "true")
             {
+                Session["validar_eliminar_pais"] = "false";
                 ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Correct_eliminar()", true);
             }
         }
@@ -56,9 +59,9 @@ namespace Godcompany
 
                 ligar.Open();
 
-            comando.CommandText = "Delete from pais where " +
+             comando.CommandText = "Delete from pais where " +
                 "(id_pais = @id_pais)";
-            comando.Parameters.AddWithValue("@id_pais", id_pais.Text);
+                comando.Parameters.AddWithValue("@id_pais", id_pais.Text);
 
 
 

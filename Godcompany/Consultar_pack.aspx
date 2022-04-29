@@ -36,7 +36,10 @@
 
     <div style="margin-left:75px">
 
-       <asp:DropDownList ID="escolher_cliente" Font-Size="Medium" class=" <%--form-group Rstar row form-group--%> form-control" runat="server" DataSourceID="escolher_cliente_sql" DataTextField="mail" DataValueField="id_cliente" AutoPostBack="True" OnSelectedIndexChanged="escolher_cliente_SelectedIndexChanged" ></asp:DropDownList>
+       <asp:DropDownList ID="escolher_cliente" Font-Size="Medium" class=" <%--form-group Rstar row form-group--%> form-control" runat="server" DataSourceID="escolher_cliente_sql" DataTextField="mail" DataValueField="id_cliente" AutoPostBack="True" OnSelectedIndexChanged="escolher_cliente_SelectedIndexChanged" >
+           <asp:ListItem>Todos</asp:ListItem>
+           <asp:ListItem></asp:ListItem>
+        </asp:DropDownList>
        
 
     

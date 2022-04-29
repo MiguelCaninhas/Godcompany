@@ -20,11 +20,13 @@ namespace Godcompany
         {
             if (Session["validar_editar_atividade"] == "true")
             {
+                Session["validar_editar_atividade"] = "false";
                 ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Correct_editar()", true);
 
             }
             if (Session["validar_eliminar_atividade"] == "true")
             {
+                Session["validar_eliminar_atividade"] = "false";
                 ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Correct_eliminar()", true);
             }
 

@@ -48,7 +48,7 @@ namespace Godcompany
 
             ligar.Open();
 
-            comando.CommandText = "Select nome_pacote, imagem from viagens_pacotes where (id_viagens_pacotes = @id_viagens_pacotes)";
+            comando.CommandText = "Select nome_pacote, imagem, data_partida, data_chegada from viagens_pacotes where (id_viagens_pacotes = @id_viagens_pacotes)";
             comando.Parameters.AddWithValue("@id_viagens_pacotes", Session["id_pack2"]);
 
 
@@ -59,8 +59,10 @@ namespace Godcompany
                
                 nome.Text = Convert.ToString(DR["nome_pacote"]);
                img.ImageUrl ="images/" + Convert.ToString(DR["imagem"]);
+                txt_voo_de_ida.Text =  Convert.ToDateTime(DR["data_partida"]).ToString("yyyy-MM-dd");
+                txt_dia_volta.Text = Convert.ToDateTime(DR["data_chegada"]).ToString("yyyy-MM-dd");
 
-
+               
 
             }
             ligar.Close();
@@ -219,8 +221,9 @@ namespace Godcompany
         {
 
 
-
-            total_de_pessoas = 0;
+            if (txt_adultos.Text != "" || txt_criancas.Text != "")
+            {
+                total_de_pessoas = 0;
 
             if (txt_criancas.Text == "")
             {
@@ -232,7 +235,7 @@ namespace Godcompany
             }
                 decimal soma_preco_quartos = 0, soma_preco_atividades = 0;
 
-
+            
           
                 if (Convert.ToInt32(pessoas_limite.Text) >= total_de_pessoas)
                 {
@@ -343,11 +346,16 @@ namespace Godcompany
                 ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error_pessoas_in()", true);
                  }
 
+            }
+
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error() ", true);
+            }
 
 
-                
-            
-          
+
+
         }
 
         protected void DropDownList4_SelectedIndexChanged(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace Godcompany
 
 
 
-            if (DR_validar_datas.Read())
+            while (DR_validar_datas.Read()) 
             {
 
                

@@ -175,6 +175,8 @@ namespace Godcompany
 
         }
 
+        int preço = 0;
+
         protected void Button1_Click(object sender, EventArgs e)
         {
             MySqlConnection ligar = new MySqlConnection(configuracao);
@@ -214,7 +216,7 @@ namespace Godcompany
 
             string[] quartos = id_hoteis.Text.Split(';');
 
-
+            int total_dias_int = 0;
             int validar_contar = 0;
             preço_2.Text = "0";
 
@@ -222,6 +224,19 @@ namespace Godcompany
             comando7.Connection = ligar;
             ligar.Open();
 
+
+            if( data_entrada.Text != "" && data_saida.Text != "") { 
+
+            DateTime data_teste1 = Convert.ToDateTime(data_saida.Text);
+            DateTime date_teste2 = Convert.ToDateTime(data_entrada.Text);
+
+
+            TimeSpan total_data = data_teste1 - date_teste2;
+          
+
+
+            total_dias_int = Convert.ToInt32(total_data.TotalDays);
+            }
             foreach (string quarto in quartos)
             {
 
@@ -237,11 +252,13 @@ namespace Godcompany
                 comando7.Parameters.AddWithValue("@id_quartos", quartos[validar_contar]);
 
                 if(quartos != null)
-                preço_2.Text =  Convert.ToString(Convert.ToInt32(preço_2.Text) + Convert.ToInt32(comando7.ExecuteScalar()));
+                    preço =  preço + Convert.ToInt32(comando7.ExecuteScalar());
 
                 validar_contar++;
             }
 
+
+            preço_2.Text = Convert.ToString(preço * total_dias_int);
             ligar.Close();
 
         }
@@ -284,6 +301,8 @@ namespace Godcompany
             }
 
 
+
+        if(txt_criancas.Text != "" || txt_adultos.Text != "") { 
             if (data_saida_v > data_entrada_v)
             {
                 if (data_entrada_v > date && data_saida_v > date)
@@ -418,10 +437,14 @@ namespace Godcompany
             }
 
 
+            }
+        else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "Error_pessoas_nada()", true);
+            }
 
 
 
-          
         }
 
         protected void DropDownList4_SelectedIndexChanged(object sender, EventArgs e)
